@@ -1,18 +1,28 @@
+const Biography = require('../model/biography.model')
+class tieusuController  {
 
-class TieusuController  {
-
-    // [GET] /tieusu
-    index(req, res) {
-        res.render('tieusu')
+    tieusu(req, res, next){
+        //promise
+        Biography.find({})
+            // .limit(1)
+            .then(biographys => res.render('tieusu', { biographys }))
+            .catch(next)
     }
 
-    //[GET] /tieusu/:slug
-    show(req, res){
-        res.send('show')
+    show(req, res, next){
+        Biography.findOne({ slug: req.params.slug })
+            .then(biography => {
+                res.render('chitiet', { biography })
+            })
+            .catch(next)
     }
-
-
 
 }
 
-module.exports = new TieusuController;
+module.exports = new tieusuController;
+
+
+
+
+                
+             
