@@ -17,6 +17,16 @@ class tieusuController  {
             .catch(next)
     }
 
+    search(req, res, next){
+        Biography.find({ 
+            name: {$regex: '.*' + req.body.name + '.*', $options: 'i'}
+        })
+        .then(biographys => {
+            res.render('tieusu', { biographys })
+        })
+        .catch(next)
+    }
+
 }
 
 module.exports = new tieusuController;

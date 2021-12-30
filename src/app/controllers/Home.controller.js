@@ -15,14 +15,15 @@ class HomeController  {
     }
 
     //[POST] /login
-    login(req, res){
+    async login(req, res){
         const email = req.body.email;
         const password = req.body.password;
+        const biographys = await Biography.find({});
         Users.findOne({$and: [{email: email}, {password: password}]}, (err, user) => {
             if(user) {
                 var msg = 'login successfull'
                 req.session.user = email;
-                res.render('home', {user:  req.session.user})
+                res.render('home', {user:  req.session.user, biographys: biographys})
             } else {
                 var msg = "login faild";
                 res.render('login', {msg})
