@@ -6,7 +6,6 @@ class adminController  {
         Biography.find({}, function(err ,biography) {
             res.render('admin', {biography});
         })
-
     }
 
     create(req, res) { 
