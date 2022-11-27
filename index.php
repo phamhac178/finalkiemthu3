@@ -1,1 +1,1 @@
-<?php header('location: src/index.js')
+<?php require_once('location: src/index.js')
