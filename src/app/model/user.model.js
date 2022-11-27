@@ -5,7 +5,10 @@ const User = new Schema({
     email: {
         type: String,
     },
-    password: {
+    FirstName: {
+        type: String,
+    },
+    LastName: {
         type: String,
     },
 },
