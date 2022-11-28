@@ -1,1 +1,0 @@
-<?php require_once('location: src/index.js')

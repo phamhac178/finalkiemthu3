@@ -5,8 +5,8 @@ const cookie = require("cookie");
 const path = require("path");
 const app = express();
 const port = 3000;
-const route = require("./routes");
-const db = require("./config/db");
+const route = require("./src/routes");
+const db = require("./src/config/db");
 
 // connect to db
 db.connect();
