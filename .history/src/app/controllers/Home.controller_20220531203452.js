@@ -36,6 +36,7 @@ class HomeController {
         );
         // res.render('login')
     }
+
     //[GET] /show/register
     showregister(req, res) {
         res.render("register");

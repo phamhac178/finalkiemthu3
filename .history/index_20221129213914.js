@@ -24,7 +24,7 @@ app.use(express.json());
 
 //Teamplate engine
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "src/resources", "views"));
+app.set("views", path.join(__dirname, "resources", "views"));
 app.set("view engine", "ejs");
 
 //session
