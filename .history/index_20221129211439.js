@@ -9,7 +9,7 @@ const port = process.env.port || 8000;
 const route = require("./src/routes");
 const db = require("./src/config/db");
 
-// connect to db
+// connect to dbs
 db.connect();
 
 app.use(

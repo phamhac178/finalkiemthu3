@@ -1,11 +1,11 @@
 const express = require("express");
-require("dotenv").config()
+require("dotenv").config
 const session = require("express-session");
 const morgan = require("morgan");
 const cookie = require("cookie");
 const path = require("path");
 const app = express();
-const port = process.env.port || 8000;
+const port = 3000;
 const route = require("./src/routes");
 const db = require("./src/config/db");
 
