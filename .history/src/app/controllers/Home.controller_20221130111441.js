@@ -36,7 +36,6 @@ class HomeController {
         );
         // res.render('login')
     }
-
     //[GET] /show/register
     showregister(req, res) {
         res.render("register");
@@ -59,6 +58,10 @@ class HomeController {
             }
             res.render("login", { msg });
         });
+    }
+    logout(req, res) {
+        req.session.destroy();
+        res.redirect("");
     }
 }
 

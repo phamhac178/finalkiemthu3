@@ -59,6 +59,10 @@ class HomeController {
             res.render("login", { msg });
         });
     }
+    logout(req, res) {
+        req.session.destroy();
+        res.redirect("");
+    }
 }
 
 module.exports = new HomeController();

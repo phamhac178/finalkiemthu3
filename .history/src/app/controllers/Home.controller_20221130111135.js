@@ -61,7 +61,7 @@ class HomeController {
     }
     logout(req, res) {
         req.session.destroy();
-        res.redirect("/show/login");
+        res.redirect("login");
     }
 }
 
